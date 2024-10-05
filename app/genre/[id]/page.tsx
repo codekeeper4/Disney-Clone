@@ -9,7 +9,7 @@ type Props = {
   };
 };
 
-async function GenrePage({ params: { id, genre } }: Props) {
+async function GenrePage({ params: { id }, searchParams: { genre } }: Props) {
   const movies = await getDiscoverMovies(id);
 
   return (
